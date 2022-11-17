@@ -25,5 +25,8 @@
             break;
         case 9:
             echo "大吉";
+            break;
+            default;
+            echo "何らかのエラーが発生しています";
     }
     ?>
