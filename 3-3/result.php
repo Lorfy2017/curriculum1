@@ -1,9 +1,11 @@
 <?php
     $num = $_GET['num'];
-    $pick = substr($num, 0, 1);
+    $shuffle = str_shuffle($num);
+    $pick = substr($shuffle, 0, 1);
+    
     echo date("Y/m/dの運勢は", time());
-    ?></br>
-    選ばれた数字は <?php echo $pick ?></br>
+    ?><br>
+    選ばれた数字は <?php echo $pick ?><br>
     <?php 
     switch($pick){
         case 0:
