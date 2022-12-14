@@ -18,33 +18,9 @@
     <button class="click">クリック</button>
     <script>
         //  ここにjQueryを記入
+
         $('button').on('click', function() {
-            $('button').toggleClass('active');
-            let flug = $(this).hasClass('active');
-            if (flug == true) {
-                open();
-            } else {
-                close();
-            }
-
-            function open() {
-                $('.left').animate({
-                    width: '0%'
-                }, 2000);
-                $('.right').animate({
-                    width: '0%'
-                }, 2000);
-            }
-
-            function close() {
-                $('.left').animate({
-                    width: '50%'
-                }, 2000);
-                $('.right').animate({
-                    width: '50%'
-                }, 2000);
-
-            }
+            $('.left,.right').toggleClass('action');
         })
     </script>
 </body>
