@@ -43,8 +43,8 @@
     
    
     <div class ="card-header">
-        <div class="pull-left mr-auto">{{$user->name}}さん</div>
-        <div class="text-right">{{$post->created_at}}</div>
+        <div class="name" style = "text-align: left;float: left">{{$user->name}}さん</div>
+        <div class="date" style = "text-align: right;">{{$post->created_at}}</div>
     </div>
                            
     
