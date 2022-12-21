@@ -2,10 +2,10 @@
 @section('title', 'つぶやき一覧')
 
 @section('content')
-    <div class="container">
+    <div class="container" Style = "font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN'">
         <div class="row">
-            <div class="col-md-8 mx-auto w-75">
-            <div class="card w-75 border-secondary">
+            <div class="col-md-8 mx-auto w-80">
+            <div class="card w-80 border-secondary">
                 <form action="{{ action('PostController@create') }}" method="post" enctype="multipart/form-data">
 
 
@@ -16,11 +16,11 @@
                             @endforeach
                         </ul>
                     @endif
-                    <div class="form-group w-75" >
-                        <label class="col-md-10 lead" for="body">なんでもつぶやいちゃえ！
+                    <div class="form-group w-80" >
+                        <label class="col-md-10" for="body" style = "font-size : 30px">なんでもつぶやいちゃえ！
                         </label>
                         <div class="col-md-10">
-                            <textarea class="form-control" rows="1" name="body" placeholder="いまなにしてる？">{{ old('body') }}</textarea>
+                            <textarea class="form-control form-control-lg border border-secondary" rows="2" name="body" placeholder="いまなにしてる？" >{{ old('body') }}</textarea>
                         </div>
                     </div>
 
@@ -31,7 +31,7 @@
                 </form></div></div><br><br>
 
 
-<div class = "card w-75 border-secondary mb-3 d-flex justify-content-center" >
+<div class = "card w-80 border-secondary mb-3 d-flex justify-content-center" >
     @foreach($posts as $post)
     @foreach($users as $user)
     @if($user -> id == $post -> user_id)
