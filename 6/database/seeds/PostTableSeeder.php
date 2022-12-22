@@ -12,7 +12,7 @@ class PostTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 8; $i <= 10; $i++) {
+        for ($i = 8; $i <= 10; $i++) {//DB内でseederで増やしたusers分のIDが８から始まっているため。
             DB::table('posts')->insert([
                 'user_id' => $i,
                 'body' => 'これはテスト!'.$i,
